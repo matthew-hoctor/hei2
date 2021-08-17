@@ -1,45 +1,34 @@
-## HEI
+## HEI2
 
-[![Travis-CI Build Status](https://travis-ci.org/timfolsom/hei.svg?branch=master)](https://travis-ci.org/timfolsom/hei)
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/hei)](https://cran.r-project.org/package=hei)
-[![codecov](https://codecov.io/gh/timfolsom/hei/branch/master/graph/badge.svg)](https://codecov.io/gh/timfolsom/hei)
-[![CRAN Downloads](https://cranlogs.r-pkg.org/badges/hei)](https://cran.r-project.org/package=hei)
-[![JOSS Publication](http://joss.theoj.org/papers/10.21105/joss.00417/status.svg)](http://dx.doi.org/10.21105/joss.00417)
-
+This project attempts to update the [hei package](https://github.com/timfolsom/hei) to be compatible with more recent FPED data.
 ___
 ### Overview
 ___
-The goal of **hei** is to calculate Healthy Eating Index (HEI) scores from National Health and Nutrition Examination Survey (NHANES) data for use in dietary analyses. The HEI is a dietary metric designed by the USDA and NCI to gauge adherence to the US Dietary Guidelines.
+The goal of **hei2** is to calculate Healthy Eating Index (HEI) scores from National Health and Nutrition Examination Survey (NHANES) data for use in dietary analyses. The HEI is a dietary metric designed by the USDA and NCI to gauge adherence to the US Dietary Guidelines.
 
 ### Installation
-___
-
-**hei** is available on [CRAN](https://cran.r-project.org/package=hei), and can be installed as follows:
-
-```
-install.packages("hei")
 ```
 
 To install the development version hosted on this repository, use the **devtools** package and the following:
 
 ```
 # install.packages("devtools")
-devtools::install_github("timfolsom/hei")
+devtools::install_github("matthew-hoctor/hei2")
 ```
 ### Getting Started
 ___
 ```
-library(hei)
+library(hei2)
 ```
 
-The **hei** package contains one key function:
+The **hei2** package contains one key function:
 
->`hei()` takes as its arguments three data sets: an FPED data set, a NHANES dietary data set, and an NHANES demographic data set, returning a HEI score for each individual in the NHANES study being analyzed.
+>`hei2()` takes as its arguments three data sets: an FPED data set, a NHANES dietary data set, and an NHANES demographic data set, returning a HEI score for each individual in the NHANES study being analyzed.
 
-**hei** also includes `get_fped()` `get_diet()` and `get_demo()` for retrieving data from the Food Patterns Equivalents Database (FPED) and the NHANES dietary and demographic databases, respectively. The FPED data sets (in the public domain) retrieved by `get_fped()` are built into the package and have been converted to .csv files from the SAS data format in which they were originally published by their creators. `get_diet()` and `get_demo()` require the R package `nhanesA` which is employed to retrieve NHANES data sets directly from the web.
+**hei2** also includes `get_fped()` `get_diet()` and `get_demo()` for retrieving data from the Food Patterns Equivalents Database (FPED) and the NHANES dietary and demographic databases, respectively. The FPED data sets (in the public domain) retrieved by `get_fped()` are built into the package and have been converted to .csv files from the SAS data format in which they were originally published by their creators. `get_diet()` and `get_demo()` require the R package `nhanesA` which is employed to retrieve NHANES data sets directly from the web.
 ### Related Work
 ___
-**hei** is intended as a tool to aid in the analysis of NHANES data. It is important to be familiar with NHANES and its complex survey design as well as the FPED, which is derived from NHANES, before beginning any analyses involving the HEI.
+**hei2** is intended as a tool to aid in the analysis of NHANES data. It is important to be familiar with NHANES and its complex survey design as well as the FPED, which is derived from NHANES, before beginning any analyses involving the HEI.
 
 * [NHANES survey methods and analytical guidelines](https://wwwn.cdc.gov/nchs/nhanes/analyticguidelines.aspx)
 
